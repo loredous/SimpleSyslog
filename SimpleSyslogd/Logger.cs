@@ -20,6 +20,8 @@ using System.IO;
 
 namespace SimpleSyslogConfig
 {
+
+    //Class to support logging for Syslogd
     class Logger
     {
         private Config _Conf;
@@ -29,6 +31,7 @@ namespace SimpleSyslogConfig
             _Conf = Conf;
         }
 
+        //Write a line to the standard log
         public void WriteLine(string Message)
         {
             bool written = false;
@@ -55,6 +58,7 @@ namespace SimpleSyslogConfig
             }
         }
 
+        //Write a line only if debug logging is enabled
         public void WriteDebugLine(string Message)
         {
             if (_Conf.DebugEnabled)
@@ -73,6 +77,7 @@ namespace SimpleSyslogConfig
             }
         }
 
+        //Get byte buffer from a string for writing.
         private byte[] GetBytes(string str)
         {
             byte[] bytes = new byte[str.Length * sizeof(char)];

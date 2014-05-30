@@ -48,10 +48,13 @@ namespace SimpleSyslog
         {
             try
             {
+                //Get the configuration file and read it into memory
                 conf = GetConfiguration();
                 ConfigWatcher.Path = Path.GetDirectoryName(conf.ConfigPath);
                 ConfigWatcher.Filter = Path.GetFileName(conf.ConfigPath);
                 Reciever = new NetReciever(ref MessageBus, conf);
+
+                //If we want UDP, start an Async UDP listener
                 if (conf.UDPEnabled)
                 {
                     UDPNetReader = new Thread(() => Reciever.StartUDPReciever());
@@ -59,6 +62,8 @@ namespace SimpleSyslog
                     UDPNetReader.IsBackground = true;
                     UDPNetReader.Start();
                 }
+
+                //If we want
                 if (conf.TCPEnabled)
                 {
                     TCPNetReader = new Thread(() => Reciever.StartTCPReciever());

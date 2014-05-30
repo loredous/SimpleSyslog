@@ -23,6 +23,8 @@ using System.Diagnostics;
 
 namespace SimpleSyslog
 {
+
+    //Class to read messages from the bus and write them to the appropriate file
     public class LogWriter
     {
         private Config _Conf = new Config();
@@ -43,12 +45,14 @@ namespace SimpleSyslog
             Log.WriteLine("Stopping Log Writer");
         }
 
+        //Auto-load new config if it has changed while the service is running
         public void LoadNewConfig(Config conf)
         {
             Log.WriteLine("Loading new configuration...");
             _Conf = conf;
         }
 
+        //Start the log writing thread
         public void StartWriter()
         {
             running = true;
@@ -94,6 +98,8 @@ namespace SimpleSyslog
             
         }
 
+        //Determine the proper source for the message, and write it to the apropriate file
+        //Also rolls logs based on config
         private void ProcessMessage(PipeMessage Msg)
         {
             SourceConfig tmp;

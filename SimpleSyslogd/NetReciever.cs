@@ -21,6 +21,8 @@ using System.Threading;
 
 namespace SimpleSyslog
 {
+
+    //Class to run the network reciever portions of the Syslog server
     public class NetReciever
     {
         private Config _Conf;
@@ -37,6 +39,7 @@ namespace SimpleSyslog
             Log = new Logger(conf);
         }
 
+        //Stop all running network listeners
         public void StopReciever()
         {
             running = false;
@@ -47,6 +50,7 @@ namespace SimpleSyslog
             Log.WriteLine("Stoping Network Listener on " + _Conf.IP.ToString() + ":" + _Conf.Port.ToString());
         }
 
+        //Async TCP reciever
         public void StartTCPReciever()
         {
             running = true;
@@ -77,6 +81,7 @@ namespace SimpleSyslog
             TCPSyslogListener.Close();
         }
 
+        //Async method to handle incoming TCP messages
         public void ProcessTCPMessage(IAsyncResult ar)
         {
             try
@@ -114,6 +119,7 @@ namespace SimpleSyslog
             }
         }
 
+        //Async UDP reciever
         public void StartUDPReciever()
         {
             running = true;
@@ -157,6 +163,7 @@ namespace SimpleSyslog
             SyslogListener.Close();
         }
 
+        //Async method to handle incoming UDP messages
         public void ProcessUDPMessage(IAsyncResult ar)
         {
             try{

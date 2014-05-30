@@ -27,6 +27,7 @@ namespace SimpleSyslogGUI
         [STAThread]
         static void Main(string[] args)
         {
+            //Fix to make the application auto-close and relaunch if launched from the installer. Allows installer to complete successfully without waiting for app to close.
             if (args.Length == 1 && args[0] == "INSTALLER") 
             {	 Process.Start(Application.ExecutablePath); return; }
             Application.EnableVisualStyles();

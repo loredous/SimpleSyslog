@@ -19,6 +19,7 @@ using System.Net;
 
 namespace SimpleSyslogConfig
 {
+    //Default definition of a message
     [Serializable]
     public class PipeMessage
     {
