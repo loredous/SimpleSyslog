@@ -1,0 +1,3 @@
+C:\Users\Loredous\Downloads\icsharpcode-SharpZipLib-c49a22d\icsharpcode-SharpZipLib-c49a22d\bin\ICSharpCode.SharpZipLib.dll
+C:\Users\Loredous\Downloads\icsharpcode-SharpZipLib-c49a22d\icsharpcode-SharpZipLib-c49a22d\src\obj\Release\ResolveAssemblyReference.cache
+C:\Users\Loredous\Downloads\icsharpcode-SharpZipLib-c49a22d\icsharpcode-SharpZipLib-c49a22d\src\obj\Release\ICSharpCode.SharpZipLib.dll

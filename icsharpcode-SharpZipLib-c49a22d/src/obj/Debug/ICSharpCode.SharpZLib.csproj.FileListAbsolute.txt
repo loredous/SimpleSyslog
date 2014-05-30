@@ -1,0 +1,5 @@
+C:\Users\Loredous\Downloads\icsharpcode-SharpZipLib-c49a22d\icsharpcode-SharpZipLib-c49a22d\bin\ICSharpCode.SharpZipLib.dll
+C:\Users\Loredous\Downloads\icsharpcode-SharpZipLib-c49a22d\icsharpcode-SharpZipLib-c49a22d\bin\ICSharpCode.SharpZipLib.pdb
+C:\Users\Loredous\Downloads\icsharpcode-SharpZipLib-c49a22d\icsharpcode-SharpZipLib-c49a22d\src\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Loredous\Downloads\icsharpcode-SharpZipLib-c49a22d\icsharpcode-SharpZipLib-c49a22d\src\obj\Debug\ICSharpCode.SharpZipLib.dll
+C:\Users\Loredous\Downloads\icsharpcode-SharpZipLib-c49a22d\icsharpcode-SharpZipLib-c49a22d\src\obj\Debug\ICSharpCode.SharpZipLib.pdb
